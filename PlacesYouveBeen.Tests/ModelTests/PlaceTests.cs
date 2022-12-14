@@ -23,14 +23,18 @@ namespace PlacesYouveBeen.Tests
     }
 
     [TestMethod]
-    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-    {
-      string city = "Tampa";
-      Place newPlace = new Place(city);
+  public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+  {
+    //Arrange
+    Place.ClearAll();
+    string city = "Tampa";
+    Place newPlace = new Place(city);
 
-      int result = new Place.Id;
+    //Act
+    int result = newPlace.Id;
 
-      Assert.AreEqual(1, result);
-    }
+    //Assert
+    Assert.AreEqual(1, result);
+  }
   }
 }
