@@ -21,5 +21,16 @@ namespace PlacesYouveBeen.Tests
       string result = newPlace.City;
       Assert.AreEqual(city, result);
     }
+
+    // [TestMethod]
+    // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    // {
+    //   string city = "Tampa";
+    //   Place newPlace = new Place(city);
+
+    //   int result = new Place.Id;
+
+    //   Assert.AreEqual(1, result);
+    // }
   }
 }
