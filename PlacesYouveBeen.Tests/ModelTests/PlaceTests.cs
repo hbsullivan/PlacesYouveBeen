@@ -36,5 +36,19 @@ namespace PlacesYouveBeen.Tests
     //Assert
     Assert.AreEqual(1, result);
   }
+
+  [TestMethod]
+  public void Find_ReturnCorrectPlace_Place()
+  {
+    Place.ClearAll();
+    string city01 = "Tampa";
+    string city02 = "Denver";
+    Place newPlace01 = new Place(city01);
+    Place newPlace02 = new Place(city02);
+
+    Place result = Place.Find(2);
+
+    Assert.AreEqual(newPlace02, result);
+  }
   }
 }
