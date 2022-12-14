@@ -22,15 +22,15 @@ namespace PlacesYouveBeen.Tests
       Assert.AreEqual(city, result);
     }
 
-    // [TestMethod]
-    // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-    // {
-    //   string city = "Tampa";
-    //   Place newPlace = new Place(city);
+    [TestMethod]
+    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string city = "Tampa";
+      Place newPlace = new Place(city);
 
-    //   int result = new Place.Id;
+      int result = new Place.Id;
 
-    //   Assert.AreEqual(1, result);
-    // }
+      Assert.AreEqual(1, result);
+    }
   }
 }
