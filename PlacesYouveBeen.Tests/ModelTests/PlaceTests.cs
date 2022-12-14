@@ -11,6 +11,7 @@ namespace PlacesYouveBeen.Tests
     {
       Place newPlace = new Place();
       Assert.AreEqual(typeof(Place), newPlace.GetType());
+      
     }
   }
 }
