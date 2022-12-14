@@ -21,7 +21,7 @@
     <ul>
       @foreach(Place place in Model)
       {
-      <li>@place.City</li>
+      <li><a href="/places/@place.Id">@place.City</a></li>
       }
     </ul>
 
