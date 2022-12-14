@@ -21,13 +21,13 @@ namespace Places.Controllers
     }
 
     [HttpPost("/places")]
-    public ActionResult Create(string city)
+    public ActionResult Create(string city, string time, string entry)
     {
-      Place newPlace = new Place(city);
+      Place newPlace = new Place(city, time, entry);
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/items/delete")]
+    [HttpPost("/places/delete")]
     public ActionResult DeleteAll()
     {
       Place.ClearAll();
@@ -39,6 +39,12 @@ namespace Places.Controllers
     {
       Place foundPlace = Place.Find(id);
       return View(foundPlace);
+    }
+
+    [HttpGet("/photos")]
+    public ActionResult Images()
+    {
+      return View();
     }
   }
   

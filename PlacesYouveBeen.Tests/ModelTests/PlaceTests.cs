@@ -9,7 +9,7 @@ namespace PlacesYouveBeen.Tests
     [TestMethod]
     public void PlaceConstructor_CreateInstanceOfPlace_Place()
     {
-      Place newPlace = new Place("test");
+      Place newPlace = new Place("test", "test1", "test 2");
       Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
 
@@ -17,7 +17,9 @@ namespace PlacesYouveBeen.Tests
     public void GetCity_ReturnsCity_String()
     {
       string city = "Portland";
-      Place newPlace = new Place(city);
+      string time = "3 days";
+      string entry = "amazing";
+      Place newPlace = new Place(city, time, entry);
       string result = newPlace.City;
       Assert.AreEqual(city, result);
     }
@@ -28,7 +30,9 @@ namespace PlacesYouveBeen.Tests
     //Arrange
     Place.ClearAll();
     string city = "Tampa";
-    Place newPlace = new Place(city);
+    string time = "3 days";
+    string entry = "amazing";
+    Place newPlace = new Place(city, time, entry);
 
     //Act
     int result = newPlace.Id;
@@ -42,9 +46,13 @@ namespace PlacesYouveBeen.Tests
   {
     Place.ClearAll();
     string city01 = "Tampa";
+    string time01 = "Two days";
+    string entry01 = "cool";
     string city02 = "Denver";
-    Place newPlace01 = new Place(city01);
-    Place newPlace02 = new Place(city02);
+    string time02 = "Dos dias";
+    string entry02 = "Dont go here";
+    Place newPlace01 = new Place(city01, time01, entry01);
+    Place newPlace02 = new Place(city02, time02, entry02);
 
     Place result = Place.Find(2);
 
